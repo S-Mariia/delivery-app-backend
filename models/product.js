@@ -10,6 +10,9 @@ const productSchema = new Schema(
       type: String,
       required: [true, "Set name for product"],
     },
+    imageUrl: {
+      type: String,
+    },
     price: {
       type: Number,
       required: [true, "Set price of product"],

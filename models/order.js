@@ -51,6 +51,9 @@ const orderSchema = new Schema(
         type: String,
         required: [true, "Address is required"],
       },
+      imageUrl: {
+        type: String,
+      },
     },
     order: [productSchema],
   },
@@ -74,6 +77,7 @@ const orderJoiSchema = Joi.object({
       price: Joi.number().required(),
       quantity: Joi.number().required(),
       shopId: Joi.string().required(),
+      imageUrl: Joi.string(),
       _id: Joi.string().required(),
     })
   ),

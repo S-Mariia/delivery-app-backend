@@ -19,8 +19,10 @@ mongoose
 
 // const { Product } = require("./models/product");
 // Product.create({
-//   name: "Nuts",
-//   price: 35,
+//   name: "Cake",
+//   imageUrl:
+//     "https://handletheheat.com/wp-content/uploads/2015/03/Best-Birthday-Cake-with-milk-chocolate-buttercream-SQUARE.jpg",
+//   price: 235,
 //   shopId: "6474c7a60fcd2e5bf5a23bb5",
 // });
 
@@ -29,7 +31,7 @@ mongoose
 //   name: "Silpo",
 // });
 
-[
+https: [
   {
     _id: "6474cf03332eb981e92b81a0",
     name: "Burger",

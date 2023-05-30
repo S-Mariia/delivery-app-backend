@@ -15,6 +15,7 @@ const isValidId = require("./middlewares/isValidId");
 router.get("/shops", ctrl.getShops);
 router.get("/products/:shopId", isValidId, ctrl.getProducts);
 router.post("/orders", validateBody(orderJoiSchema), ctrl.createOrder);
+router.get("/orders", ctrl.getOrdersHistory);
 // router.get("/:contactId", authenticate, isValidId, ctrl.getContact);
 // router.post(
 //   "/",
