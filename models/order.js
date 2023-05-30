@@ -16,6 +16,9 @@ const productSchema = new Schema({
     type: Number,
     required: [true, "Set price of product"],
   },
+  imageUrl: {
+    type: String,
+  },
   shopId: {
     type: Schema.Types.ObjectId,
     ref: "shop",
@@ -51,9 +54,6 @@ const orderSchema = new Schema(
         type: String,
         required: [true, "Address is required"],
       },
-      imageUrl: {
-        type: String,
-      },
     },
     order: [productSchema],
   },
@@ -82,33 +82,5 @@ const orderJoiSchema = Joi.object({
     })
   ),
 });
-
-// const loginSchema = Joi.object({
-//   email: Joi.string().pattern(new RegExp(emailRegExp)).required(),
-//   password: Joi.string()
-//     .min(6)
-//     .required()
-//     .messages({ "string.min": "The password has at least 6 symbols" }),
-// });
-
-// const updateSubscriptionSchema = Joi.object({
-//   subscription: Joi.string()
-//     .required()
-//     .valid(...subscriptionOptions),
-// });
-
-// const verifyEmailSchema = Joi.object({
-//   email: Joi.string()
-//     .pattern(new RegExp(emailRegExp))
-//     .required()
-//     .messages({ "any.required": "missing required field email" }),
-// });
-
-// const schemas = {
-//   registerSchema,
-//   loginSchema,
-//   updateSubscriptionSchema,
-//   verifyEmailSchema,
-// };
 
 module.exports = { Order, orderJoiSchema };
